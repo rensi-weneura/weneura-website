@@ -1,0 +1,93 @@
+# ======================================================================
+# WENEURA FUTURETECH - SERVER CONFIGURATION (.htaccess)
+# NOTE: This file is designed specifically for Apache Web Servers
+# (Requires: mod_rewrite, mod_alias, mod_headers, mod_deflate, mod_expires)
+# ======================================================================
+
+# Execute PHP inside .html files
+AddType application/x-httpd-php .html
+# Note: Some Apache / cPanel / LiteSpeed hosts may require AddHandler instead:
+# AddHandler application/x-httpd-php .html
+
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# 1. Block direct access to /components/ directory and files
+RewriteRule ^components/.*$ - [F,L,NC]
+
+# 2. Force HTTPS and WWW in ONE single hop
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.weneurafuturetech\.com$ [NC]
+RewriteRule ^(.*)$ https://www.weneurafuturetech.com/$1 [R=301,L]
+
+# 3. Redirect /index.html to clean trailing-slash directory URL
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ https://www.weneurafuturetech.com/$1 [R=301,L]
+
+# 4. Discontinued Courses - HTTP 410 Gone (Matches redirects.csv)
+RedirectMatch 410 ^/course/.*$
+
+# 5. Old Site Page-by-Page 301 Redirects (Matches redirects.csv row-by-row)
+Redirect 301 "/services.html" https://www.weneurafuturetech.com/services/
+Redirect 301 "/cloud mordanization.html" https://www.weneurafuturetech.com/services/software-development/
+Redirect 301 "/cloud application modernization.html" https://www.weneurafuturetech.com/services/software-development/
+Redirect 301 "/cloud-modernization.html" https://www.weneurafuturetech.com/services/software-development/
+Redirect 301 "/data and analytics.html" https://www.weneurafuturetech.com/services/ai-development/
+Redirect 301 "/data-and-analytics.html" https://www.weneurafuturetech.com/services/ai-development/
+Redirect 301 "/applied ai.html" https://www.weneurafuturetech.com/services/ai-development/
+Redirect 301 "/applied-ai.html" https://www.weneurafuturetech.com/services/ai-development/
+Redirect 301 "/software engineering.html" https://www.weneurafuturetech.com/services/software-development/
+Redirect 301 "/software-engineering.html" https://www.weneurafuturetech.com/services/software-development/
+Redirect 301 "/industries.html" https://www.weneurafuturetech.com/services/
+Redirect 301 "/about.html" https://www.weneurafuturetech.com/about/
+Redirect 301 "/contact.html" https://www.weneurafuturetech.com/contact/
+Redirect 301 "/human centric blog.html" https://www.weneurafuturetech.com/blog/human-centric-artificial-intelligence/
+Redirect 301 "/AI Odyssey.html" https://www.weneurafuturetech.com/blog/ai-odyssey-logic-gates-to-learning-machines/
+Redirect 301 "/AI and Ethics.html" https://www.weneurafuturetech.com/blog/ai-ethics-digital-morality/
+Redirect 301 "/AI in Your Pocket.html" https://www.weneurafuturetech.com/blog/ai-in-daily-life/
+
+# 6. Security Headers
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# 7. GZIP Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# 8. Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/html "access plus 10 minutes"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|jpe?g|png|webp|avif|svg|woff2|css|js)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+    <FilesMatch "thank-you">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# 9. Custom 404 Error Page
+ErrorDocument 404 /404.html

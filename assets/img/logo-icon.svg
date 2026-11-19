@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="34" height="34">
+  <g fill="#1053F3">
+    <!-- 0 deg (Vertical) -->
+    <rect x="18" y="2.5" width="4" height="9" rx="2"/>
+    <rect x="18" y="28.5" width="4" height="9" rx="2"/>
+    <!-- 90 deg (Horizontal) -->
+    <rect x="2.5" y="18" width="9" height="4" rx="2"/>
+    <rect x="28.5" y="18" width="9" height="4" rx="2"/>
+    <!-- 45 deg (Diagonal 1) -->
+    <g transform="rotate(45 20 20)">
+      <rect x="18" y="2.5" width="4" height="9" rx="2"/>
+      <rect x="18" y="28.5" width="4" height="9" rx="2"/>
+    </g>
+    <!-- -45 deg (Diagonal 2) -->
+    <g transform="rotate(-45 20 20)">
+      <rect x="18" y="2.5" width="4" height="9" rx="2"/>
+      <rect x="18" y="28.5" width="4" height="9" rx="2"/>
+    </g>
+  </g>
+</svg>

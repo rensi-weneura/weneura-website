@@ -1,0 +1,50 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Environment & Sensitive Files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# Node / Package Managers (if applicable)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Logs & Runtime Cache
+*.log
+logs/
+error_log
+.cache/
+.temp/
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# Local Reference & Scratch Folders
+for refrences/
+for references/

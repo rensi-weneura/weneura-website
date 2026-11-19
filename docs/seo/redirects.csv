@@ -1,0 +1,21 @@
+old_url,new_url,code,reason
+/index.html,/,301,Homepage canonicalization
+/services.html,/services/,301,Old services page
+/cloud mordanization.html,/services/software-development/,301,Old cloud page typo
+/cloud application modernization.html,/services/software-development/,301,Old cloud page
+/cloud-modernization.html,/services/software-development/,301,Old cloud page
+/data and analytics.html,/services/ai-development/,301,Old data and analytics page
+/data-and-analytics.html,/services/ai-development/,301,Old data and analytics page
+/applied ai.html,/services/ai-development/,301,Old applied AI page
+/applied-ai.html,/services/ai-development/,301,Old applied AI page
+/software engineering.html,/services/software-development/,301,Old software engineering page
+/software-engineering.html,/services/software-development/,301,Old software engineering page
+/industries.html,/services/,301,Old industries placeholder mapped to services hub
+/about.html,/about/,301,Old about page
+/contact.html,/contact/,301,Old contact page
+/course/course main.html,,410,Courses discontinued permanently
+/course/*,,410,Courses discontinued permanently
+/human centric blog.html,/blog/human-centric-artificial-intelligence/,301,Migrated legacy blog post
+/AI Odyssey.html,/blog/ai-odyssey-logic-gates-to-learning-machines/,301,Migrated legacy blog post
+/AI and Ethics.html,/blog/ai-ethics-digital-morality/,301,Migrated legacy blog post
+/AI in Your Pocket.html,/blog/ai-in-daily-life/,301,Migrated legacy blog post

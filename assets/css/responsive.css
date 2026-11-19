@@ -1,0 +1,989 @@
+/* ==========================================================================
+   WENEURA TECHNOLOGIES - RESPONSIVE STYLESHEET
+   Mobile, Tablet, and Desktop Breakpoints (Unified Classes)
+   ========================================================================== */
+
+/* ==========================================================================
+   DESKTOP VIEWPORT SAFETY (Min width: 992px) - KEEP UNTOUCHED
+   ========================================================================== */
+@media (min-width: 992px) {
+  .header-toggle-circle-btn {
+    display: none !important;
+  }
+
+  .header-offcanvas {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   1. SMALL DESKTOP & LANDSCAPE TABLETS (Max width: 1199.98px)
+   ========================================================================== */
+
+@media (max-width: 1199.98px) {
+  .nav-link {
+    font-size: 15px;
+    padding: 10px 12px !important;
+  }
+
+  .navbar-brand {
+    margin-right: 20px;
+  }
+
+  .header-logo {
+    height: 42px;
+  }
+
+  .hero-title {
+    font-size: 46px;
+  }
+
+  .statement-heading {
+    font-size: 36px;
+  }
+
+  .service-stack-card {
+    padding: 36px 36px;
+  }
+
+  .service-card-title {
+    font-size: 21px;
+  }
+}
+
+/* ==========================================================================
+   2. TABLETS & LARGE MOBILE (Max width: 991.98px)
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+
+  /* Unified Section Spacing on Tablet */
+  .py-60 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  /* Header & Mobile/Tablet Navigation (Hamburger + Offcanvas) */
+  .site-header {
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .site-header.is-sticky {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .main-navbar {
+    padding: 12px 0;
+  }
+
+  .header-logo {
+    height: 38px;
+    max-width: 160px;
+    object-fit: contain;
+  }
+
+  .header-center-capsule {
+    display: none !important;
+  }
+
+  .mega-dropdown-menu {
+    display: none !important;
+  }
+
+  .header-right-action {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Circular Hamburger Button */
+  .header-toggle-circle-btn {
+    display: inline-flex !important;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+  }
+
+  .header-toggle-circle-btn:hover,
+  .header-toggle-circle-btn:focus-visible {
+    background-color: #fff6f2;
+    border-color: var(--theme-primary, #ee7843);
+    box-shadow: 0 4px 12px rgba(238, 120, 67, 0.2);
+  }
+
+  .hamburger-bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18px;
+    height: 12px;
+  }
+
+  .hamburger-bars span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #111827;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+  }
+
+  .header-toggle-circle-btn:hover .hamburger-bars span {
+    background-color: var(--theme-primary, #ee7843);
+  }
+
+  /* Offcanvas Drawer for Mobile & Tablet */
+  .header-offcanvas {
+    width: 340px !important;
+    max-width: 86vw;
+    background-color: #ffffff;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
+    border-left: 1px solid rgba(0, 0, 0, 0.06);
+    z-index: 1070 !important;
+  }
+
+  .header-offcanvas .offcanvas-header {
+    background-color: #fafafa;
+  }
+
+  .header-offcanvas .offcanvas-nav-link {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #1f2937;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-offcanvas .offcanvas-nav-link:hover,
+  .header-offcanvas .offcanvas-nav-link.active {
+    color: var(--theme-primary, #ee7843) !important;
+    background-color: rgba(238, 120, 67, 0.08);
+  }
+
+  .header-offcanvas .offcanvas-nav-link[aria-expanded="true"] {
+    color: var(--theme-primary, #ee7843);
+    background-color: rgba(238, 120, 67, 0.05);
+  }
+
+  .header-offcanvas .offcanvas-nav-link[aria-expanded="true"] .offcanvas-chevron {
+    transform: rotate(180deg);
+    color: var(--theme-primary, #ee7843) !important;
+  }
+
+  .header-offcanvas .offcanvas-chevron {
+    font-size: 12px;
+    transition: transform 0.25s ease;
+  }
+
+  /* Submenu for Services in Offcanvas */
+  .header-offcanvas .offcanvas-submenu {
+    border-color: rgba(238, 120, 67, 0.25) !important;
+  }
+
+  .header-offcanvas .offcanvas-sub-link {
+    font-size: 13.5px;
+    text-decoration: none;
+    padding: 6px 0;
+    color: #4b5563 !important;
+    transition: all 0.2s ease;
+    line-height: 1.4;
+  }
+
+  .header-offcanvas .offcanvas-sub-link:hover,
+  .header-offcanvas .offcanvas-sub-link.active {
+    color: var(--theme-primary, #ee7843) !important;
+    padding-left: 4px;
+  }
+
+  /* Contact Us Button inside Drawer */
+  .header-offcanvas .btn-header-contact {
+    background: linear-gradient(135deg, var(--theme-primary, #ee7843) 0%, #ff8a50 100%);
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(238, 120, 67, 0.35);
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .header-offcanvas .btn-header-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(238, 120, 67, 0.45);
+    color: #ffffff !important;
+  }
+
+  /* Hero Section */
+  .hero-video-section {
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  /* Why We Section */
+  .statement-heading {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+
+  /* Unified Section Headings */
+  .sec-title {
+    font-size: 34px;
+    margin-bottom: 16px;
+  }
+
+  /* Services Section */
+  .service-stack-card {
+    padding: 30px 24px;
+    top: 90px;
+    margin-bottom: 45px;
+  }
+
+  .service-card-desc {
+    padding-right: 0;
+  }
+
+  /* FAQ Section */
+  .faq-sidebar {
+    position: static;
+    margin-bottom: 35px;
+  }
+
+  .custom-faq-accordion .accordion-button {
+    font-size: 16.5px;
+    padding: 18px 20px;
+  }
+
+  /* Recent Posts Section */
+  .recent-posts-header {
+    margin-bottom: 35px;
+  }
+
+  .recent-post-card {
+    padding: 12px;
+  }
+
+  .recent-post-card .post-title {
+    font-size: 19px;
+  }
+
+  /* Site Footer */
+  .footer-cta-title {
+    font-size: 40px;
+    margin-bottom: 12px;
+  }
+
+  .footer-nav-col {
+    padding-left: 0;
+  }
+
+  /* Build Together CTA Section */
+  .build-together-card {
+    padding: 36px 28px;
+  }
+
+  .build-left-col {
+    /* align-items: center !important;
+    text-align: center; */
+    margin-bottom: 36px;
+    gap: 0;
+  }
+
+  .contact-paragraph {
+    max-width: 100%;
+    /* text-align: center; */
+  }
+
+  .build-section-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .build-form-card {
+    padding: 26px 20px;
+  }
+
+  /* About Page Hero Section */
+  .about-hero-section {
+    text-align: left;
+  }
+
+  .about-content {
+    padding-right: 0 !important;
+  }
+
+  .about-image-wrapper {
+    display: none !important;
+  }
+
+  /* Vision & Mission Section */
+  .vm-clean-illustration {
+    max-height: 290px;
+  }
+
+  .vm-content-block {
+    text-align: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Values & Beliefs Section */
+  .value-card {
+    padding: 24px 20px;
+  }
+
+  /* Career Page Tablet */
+  .career-hero-section {
+    padding-top: calc(var(--header-height, 88px) + 25px) !important;
+    padding-bottom: 35px !important;
+  }
+
+  .career-watermark-text {
+    display: none !important;
+  }
+
+}
+
+/* ==========================================================================
+   3. MOBILE PHONES (Max width: 575.98px)
+   ========================================================================== */
+
+@media (max-width: 575.98px) {
+
+  /* Unified Section Spacing on Mobile */
+  .py-60 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .header-logo {
+    height: 38px;
+  }
+
+  /* Hero Section */
+  .hero-title {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Search Overlay */
+  .search-box {
+    padding: 0 15px;
+  }
+
+  .search-input {
+    font-size: 20px;
+  }
+
+  .search-close-btn {
+    top: 25px;
+    right: 25px;
+    font-size: 26px;
+  }
+
+  /* Why We Section */
+  .statement-heading {
+    font-size: 24px;
+    line-height: 1.42;
+  }
+
+  /* Unified Section Headings */
+  .sec-title {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .sec-desc {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* Services Section */
+  .service-stack-card {
+    padding: 24px 18px;
+    position: static !important;
+    margin-bottom: 20px;
+  }
+
+  .service-icon-box {
+    width: 55px;
+    height: 55px;
+  }
+
+  .service-icon-box i {
+    font-size: 36px;
+  }
+
+  .service-card-title {
+    font-size: 20px;
+  }
+
+  .service-card-desc {
+    font-size: 14.5px;
+  }
+
+  .service-arrow-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* FAQ Section */
+  .custom-faq-accordion .accordion-button {
+    font-size: 15px;
+    padding: 16px 16px;
+    gap: 10px;
+  }
+
+  .custom-faq-accordion .accordion-body {
+    padding: 0 16px 18px 16px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .faq-support-card {
+    padding: 20px 18px;
+  }
+
+  /* Recent Posts Section */
+  .recent-posts-header {
+    margin-bottom: 28px;
+  }
+
+  .view-all-posts-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .recent-post-card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .recent-post-card .post-title {
+    font-size: 18px;
+  }
+
+  .recent-post-card .post-excerpt {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  /* Site Footer */
+  .footer-top-bar {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 18px;
+  }
+
+  .footer-cta-title {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .footer-nav-title {
+    font-size: 19px;
+    margin-bottom: 16px;
+  }
+
+  /* Build Together CTA Section */
+  .build-together-card {
+    padding: 26px 16px;
+    border-radius: 20px;
+  }
+
+  .contact-badge-wrapper {
+    width: 170px;
+    height: 170px;
+  }
+
+  .contact-badge-center {
+    width: 60px;
+  }
+
+  .contact-center-logo {
+    max-width: 60px;
+  }
+
+  .build-section-title {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .build-form-card {
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+
+  .build-input {
+    font-size: 13.5px;
+    padding: 11px 14px;
+  }
+
+  .btn-book-call,
+  .btn-build-send {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* About Page Hero Mobile */
+  .btn-schedule-call {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Vision & Mission Mobile */
+  .vm-clean-illustration {
+    max-height: 230px;
+  }
+
+  .vm-content-block h3 {
+    font-size: 26px;
+  }
+
+  /* Values & Beliefs Mobile */
+  .value-card {
+    padding: 20px 18px;
+    border-radius: 14px;
+  }
+
+
+  .value-icon-box {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .value-card-title {
+    font-size: 17px;
+  }
+
+  /* Blog Details Mobile */
+  .blog-details-title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .blog-lead {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .blog-heading,
+  .blog-content h2,
+  .blog-content h3 {
+    font-size: 26px;
+    margin: 22px 0 16px;
+  }
+
+  .blog-para,
+  .blog-content p,
+  .blog-content li {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .blog-details-quote {
+    padding: 20px 18px;
+    font-size: 17px;
+  }
+
+  .blog-details-author-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 18px;
+    gap: 16px;
+  }
+
+  .blog-comment-item {
+    padding: 16px 14px;
+    gap: 14px;
+  }
+
+  .blog-reply-item {
+    margin-left: 20px;
+  }
+
+  .blog-comment-form-card {
+    padding: 24px 16px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE PHONES HEADER ADJUSTMENTS (Max width: 575.98px)
+   ========================================================================== */
+@media (max-width: 575.98px) {
+  .main-navbar {
+    padding: 10px 0;
+  }
+
+  .header-logo {
+    height: 32px !important;
+    max-width: 135px;
+  }
+
+  .header-toggle-circle-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .hamburger-bars {
+    width: 16px;
+    height: 11px;
+  }
+
+  .header-offcanvas {
+    width: 300px !important;
+    max-width: 88vw;
+  }
+
+  .header-offcanvas .offcanvas-body {
+    padding: 1.25rem !important;
+  }
+
+  .header-offcanvas .offcanvas-nav-link {
+    font-size: 15px;
+    padding: 9px 12px;
+  }
+
+  .header-offcanvas .btn-header-contact {
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================================
+   CAREER PAGE RESPONSIVE OPTIMIZATIONS (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .career-hero-section {
+    padding-top: calc(var(--header-height, 88px) + 20px) !important;
+    padding-bottom: 28px !important;
+  }
+
+  .career-watermark-text {
+    display: none !important;
+  }
+
+  .job-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 16px !important;
+    gap: 12px !important;
+  }
+
+  .job-card-title {
+    font-size: 1.12rem !important;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .job-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+  }
+
+  .job-card-meta .meta-divider {
+    display: none;
+  }
+
+  .job-card-meta > span:not(.meta-divider) {
+    display: inline-flex;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 3px 9px;
+    border-radius: 6px;
+    color: #475569;
+  }
+
+  .job-card-meta strong {
+    color: #0f172a;
+    margin-left: 3px;
+  }
+
+  .job-card-actions {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-top: 12px !important;
+    border-top: 1px dashed rgba(238, 120, 67, 0.2) !important;
+    margin-top: 2px;
+  }
+
+  .btn-job-apply {
+    padding: 7px 14px 7px 18px !important;
+    font-size: 13.5px !important;
+  }
+
+  .btn-job-apply .apply-arrow-circle {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+
+  .job-toggle-btn {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 12px;
+  }
+
+  .job-card-body {
+    padding: 14px 16px 20px !important;
+  }
+
+  .job-detail-title {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .job-detail-list {
+    padding-left: 18px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .job-skill-tag {
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    margin-right: 4px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .career-hero-section {
+    padding-top: 85px !important;
+    padding-bottom: 22px !important;
+  }
+
+  .career-subtitle {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px !important;
+    text-transform: uppercase;
+    color: var(--theme-primary, #ee7843) !important;
+  }
+
+  .career-hero-section .sec-title {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+    letter-spacing: -0.3px;
+  }
+
+  .career-description {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    color: #4b5563 !important;
+  }
+
+  .career-openings-section {
+    padding-top: 14px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .career-openings-section .text-center.mb-5 {
+    margin-bottom: 18px !important;
+  }
+
+  .openings-subtitle {
+    font-size: 0.85rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .career-openings-section .sec-title {
+    font-size: 22px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .job-card-item {
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  .job-card-header {
+    padding: 14px 12px !important;
+  }
+
+  .job-card-title {
+    font-size: 1.05rem !important;
+  }
+
+  #applyJobModal .modal-dialog {
+    margin: 0.75rem;
+  }
+
+  #applyJobModal .modal-body {
+    padding: 1.25rem !important;
+  }
+
+  #applyJobModal .modal-title {
+    font-size: 1.05rem;
+  }
+}
+/* ==========================================================================
+   ABOUT PAGE (/about/) — scoped with body.page-about
+   ========================================================================== */
+
+/* Tablet & below (< 992px) */
+@media (max-width: 991.98px) {
+  .page-about .about-hero-section {
+    padding-top: calc(68px + 40px);
+    padding-bottom: 40px;
+  }
+
+  .page-about .vision-mission-section,
+  .page-about .our-values-section,
+  .page-about .build-together-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .page-about .vm-row.mb-5 {
+    margin-bottom: 40px !important;
+  }
+
+  .page-about .vm-content-block {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .page-about .values-heading {
+    margin-bottom: 32px !important;
+  }
+
+  .page-about .contact-paragraph {
+    font-size: 24px;
+  }
+}
+
+/* Phones (< 768px) */
+@media (max-width: 767.98px) {
+  .page-about .about-hero-section {
+    padding-top: calc(68px + 28px);
+    padding-bottom: 32px;
+  }
+
+  .page-about .vision-mission-section,
+  .page-about .our-values-section,
+  .page-about .build-together-section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .page-about .about-hero-title {
+    margin-bottom: 18px !important;
+  }
+
+  .page-about .about-content p {
+    font-size: 15px !important;
+    line-height: 1.65;
+  }
+
+  .page-about .vm-row.mb-5 {
+    margin-bottom: 32px !important;
+  }
+
+  .page-about .vm-row .mb-4 {
+    margin-bottom: 12px !important;
+  }
+
+  .page-about .vm-content-block p {
+    font-size: 15px !important;
+    line-height: 1.65;
+  }
+
+  .page-about .values-heading {
+    margin-bottom: 24px !important;
+  }
+
+  .page-about .our-values-section .row.g-4 {
+    --bs-gutter-y: 16px;
+  }
+
+  /* Contact CTA: center the left column when stacked */
+  .page-about .build-left-col {
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .page-about .contact-paragraph {
+    font-size: 22px;
+    max-width: 100%;
+  }
+
+  .page-about .build-section-title {
+    text-align: center;
+  }
+}
+
+/* Small phones (< 576px) */
+@media (max-width: 575.98px) {
+  .page-about .about-hero-actions {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  .page-about .about-hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .page-about .contact-badge-wrapper {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 12px;
+  }
+
+  .page-about .contact-paragraph {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+}
+
+/* Touch devices: disable hover lifts that "stick" after tap */
+@media (hover: none) {
+  .page-about .value-card:hover,
+  .page-about .vm-clean-illustration:hover,
+  .page-about .btn-schedule-call:hover {
+    transform: none;
+  }
+}

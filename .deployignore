@@ -1,0 +1,21 @@
+# Deployment Ignore List
+# The following directories and files must NEVER be uploaded to the production web server (public_html / www root):
+
+# Internal Documentation & Strategy (Internal Use Only)
+docs/
+docs/**
+
+# Specification PDF Rebuild Packs (Internal Use Only)
+pdf/
+pdf/**
+
+# Local Development Helper Scripts
+router.php
+
+# Version Control & Editor metadata
+.git/
+.gitignore
+.deployignore
+.DS_Store
+Thumbs.db
+*.tmp

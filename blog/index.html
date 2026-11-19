@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automation, Robotics &amp; AI Blog | Weneura Futuretech</title>
+  <meta name="description"
+    content="Practical guides and engineering insights on industrial automation, robotics, machine vision, IoT, AI and ERP from the Weneura Futuretech team.">
+  <link rel="canonical" href="https://www.weneurafuturetech.com/blog/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Weneura Futuretech">
+  <meta property="og:title" content="Automation, Robotics &amp; AI Blog | Weneura Futuretech">
+  <meta property="og:description"
+    content="Practical guides and engineering insights on industrial automation, robotics, machine vision, IoT, AI and ERP.">
+  <meta property="og:url" content="https://www.weneurafuturetech.com/blog/">
+  <meta property="og:image" content="https://www.weneurafuturetech.com/assets/img/og/og-blog.png">
+  <meta property="og:image:secure_url" content="https://www.weneurafuturetech.com/assets/img/og/og-blog.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Weneura Futuretech blog: automation, robotics, machine vision and AI guides">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Automation, Robotics &amp; AI Blog | Weneura Futuretech">
+  <meta name="twitter:description"
+    content="Practical guides and engineering insights on industrial automation, robotics, machine vision, IoT, AI and ERP.">
+  <meta name="twitter:image" content="https://www.weneurafuturetech.com/assets/img/og/og-blog.png">
+  <meta name="twitter:image:alt" content="Weneura Futuretech blog: automation, robotics, machine vision and AI guides">
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Google Fonts: Arimo (Headings) & Inter (Paragraphs / Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Font Awesome 6.5.2 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZELBR96617"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-ZELBR96617');
+  </script>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://www.weneurafuturetech.com/blog/#blog",
+        "url": "https://www.weneurafuturetech.com/blog/",
+        "name": "Weneura Futuretech Blog",
+        "description": "Practical guides and engineering insights on industrial automation, robotics, machine vision, IoT, AI and ERP from the Weneura Futuretech team.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://www.weneurafuturetech.com/#website" },
+        "publisher": { "@id": "https://www.weneurafuturetech.com/#organization" },
+        "breadcrumb": { "@id": "https://www.weneurafuturetech.com/blog/#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.weneurafuturetech.com/blog/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.weneurafuturetech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.weneurafuturetech.com/blog/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="light-theme">
+
+  <!-- ==========================================================================
+     COMMON SITE HEADER COMPONENT (WENEURA FUTURETECH)
+     Capsule navigation, 5-division mega-menu, and mobile offcanvas drawer.
+     ========================================================================== -->
+  <header class="site-header">
+    <nav class="navbar main-navbar py-3">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- Left Column: Brand Logo -->
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand m-0" href="/">
+            <img src="/assets/img/brand/logo-weneurafuturetech-dark.webp" alt="Weneura Futuretech" class="header-logo">
+          </a>
+        </div>
+
+        <!-- Center Column: Floating Capsule Tab (Home, About Us, Services, Blog, Career) -->
+        <div class="header-center-capsule d-none d-lg-flex align-items-center">
+          <ul class="nav nav-capsule-links m-0 p-0 d-flex align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">About Us</a>
+            </li>
+            <!-- Services Trigger (Mega Dropdown on hover/click) -->
+            <li class="nav-item nav-services-item">
+              <a class="nav-link nav-services-trigger d-inline-flex align-items-center gap-1" href="/services/"
+                id="servicesTrigger" role="button" aria-expanded="false" aria-controls="servicesMegaMenu">
+                <span>Services</span>
+                <i class="bi bi-chevron-down services-chevron"
+                  style="font-size:11px;transition:transform 0.25s ease;"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/career/">Career</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Contact Us Pill Button + Mobile Hamburger Toggle -->
+        <div class="header-right-action d-flex align-items-center gap-2">
+          <a href="/contact/"
+            class="btn btn-header-contact rounded-pill d-none d-md-inline-flex align-items-center gap-2">
+            <span>Contact Us</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+
+          <!-- Hamburger Toggle Button (Mobile & Tablet Only) -->
+          <button class="header-toggle-circle-btn d-inline-flex d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#headerOffcanvasMenu" aria-controls="headerOffcanvasMenu"
+            aria-label="Toggle navigation menu">
+            <span class="hamburger-bars">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- MEGA DROPDOWN MENU (5 Core Engineering Divisions) -->
+    <div class="mega-dropdown-menu" id="servicesMegaMenu" role="dialog" aria-label="Services menu" aria-hidden="true">
+      <div class="container">
+        <div class="row g-3 g-lg-4">
+
+          <!-- 1. Robotics & Industrial Automation -->
+          <div class="col-lg col-md-6 mega-col-block">
+            <a href="/services/robotics-industrial-automation/"
+              class="mega-category-title text-decoration-none d-block">Robotics &amp; Industrial Automation</a>
+            <div class="mega-category-line"></div>
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+              <li><a href="/services/robotics-industrial-automation/" class="mega-item-link">6-Axis Robotic Systems</a>
+              </li>
+              <li><a href="/services/robotics-industrial-automation/" class="mega-item-link">Automated Guided Vehicles
+                  (AGVs)</a></li>
+              <li><a href="/services/robotics-industrial-automation/" class="mega-item-link">Robotic Welding Systems</a>
+              </li>
+              <li><a href="/services/robotics-industrial-automation/" class="mega-item-link">Collaborative Robots
+                  (Cobots)</a></li>
+              <li><a href="/services/robotics-industrial-automation/" class="mega-item-link">Robotic Palletizing
+                  Systems</a></li>
+              <li><a href="/services/robotics-industrial-automation/" class="mega-item-link">Special Purpose Machines
+                  (SPM)</a></li>
+            </ul>
+          </div>
+
+          <!-- 2. Software Development -->
+          <div class="col-lg col-md-6 mega-col-block">
+            <span class="mega-category-title d-block">Software Development</span>
+            <div class="mega-category-line"></div>
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+              <li><a href="/services/software-development/custom-erp-development/" class="mega-item-link">Custom ERP
+                  Development</a></li>
+              <li><a href="/services/software-development/odoo-erp-development/" class="mega-item-link">Odoo ERP
+                  Development &amp; Implementation</a></li>
+              <li><a href="/services/software-development/web-application-development/" class="mega-item-link">Web
+                  Application Development</a></li>
+              <li><a href="/services/software-development/mobile-application-development/" class="mega-item-link">Mobile
+                  Application Development</a></li>
+              <li><a href="/services/software-development/android-ios-app-development/" class="mega-item-link">Android
+                  &amp; iOS App Development</a></li>
+            </ul>
+          </div>
+
+          <!-- 3. Hardware & Automation -->
+          <div class="col-lg col-md-6 mega-col-block">
+            <a href="/services/hardware-automation/" class="mega-category-title text-decoration-none d-block">Hardware
+              &amp; Automation</a>
+            <div class="mega-category-line"></div>
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+              <li><a href="/services/hardware-automation/" class="mega-item-link">Weight Scale Sensors</a></li>
+              <li><a href="/services/hardware-automation/" class="mega-item-link">IR Sensor Solutions</a></li>
+              <li><a href="/services/hardware-automation/" class="mega-item-link">Thermal Sensor Solutions</a></li>
+              <li><a href="/services/hardware-automation/" class="mega-item-link">RTC Solutions for Casting
+                  Industries</a></li>
+              <li><a href="/services/hardware-automation/" class="mega-item-link">Custom Industrial Automation</a></li>
+              <li><a href="/services/hardware-automation/" class="mega-item-link">Custom Sensor Development for
+                  Manufacturing</a></li>
+            </ul>
+          </div>
+
+          <!-- 4. Computer Vision -->
+          <div class="col-lg col-md-6 mega-col-block">
+            <a href="/services/computer-vision/" class="mega-category-title text-decoration-none d-block">Computer
+              Vision</a>
+            <div class="mega-category-line"></div>
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+              <li><a href="/services/computer-vision/" class="mega-item-link">High-Speed Camera Integration</a></li>
+              <li><a href="/services/computer-vision/" class="mega-item-link">Object Detection</a></li>
+              <li><a href="/services/computer-vision/" class="mega-item-link">Object Counting</a></li>
+              <li><a href="/services/computer-vision/" class="mega-item-link">Automated Quality Inspection</a></li>
+              <li><a href="/services/computer-vision/" class="mega-item-link">Industrial Visual Inspection Systems</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 5. AI Development -->
+          <div class="col-lg col-md-6 mega-col-block">
+            <span class="mega-category-title text-decoration-none d-block">AI Development</span>
+            <div class="mega-category-line"></div>
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+              <li><a href="/services/ai-development/" class="mega-item-link">Custom AI Development</a></li>
+              <li><a href="/services/ai-development/" class="mega-item-link">AI Consultancy</a></li>
+              <li><a href="/services/ai-development/" class="mega-item-link">Manufacturing AI Solutions</a></li>
+              <li><a href="/services/ai-development/" class="mega-item-link">AI-Powered Industrial Automation</a></li>
+            </ul>
+          </div>
+
+        </div><!-- end row -->
+
+        <!-- Mega Dropdown Footer Link -->
+        <div class="mega-dropdown-footer">
+          <a href="/services/" class="mega-dropdown-footer-link">
+            <span>Explore All Services</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div><!-- end container -->
+    </div><!-- end #servicesMegaMenu -->
+
+  </header>
+
+  <!-- OFFCANVAS TOGGLE MENU (TABLET & MOBILE DRAWER) -->
+  <div class="offcanvas offcanvas-end header-offcanvas" tabindex="-1" id="headerOffcanvasMenu"
+    aria-labelledby="headerOffcanvasMenuLabel">
+    <div class="offcanvas-header border-bottom py-3 px-4 d-flex align-items-center justify-content-between">
+      <a class="navbar-brand m-0" href="/">
+        <img src="/assets/img/brand/logo-weneurafuturetech-dark.webp" alt="Weneura Futuretech" class="header-logo"
+          style="height: 34px;">
+      </a>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4 d-flex flex-column justify-content-between">
+      <div>
+        <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
+          <li>
+            <a href="/"
+              class="offcanvas-nav-link d-flex align-items-center justify-content-between py-2 text-decoration-none">
+              <span>Home</span>
+              <i class="bi bi-chevron-right small text-muted"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/about/"
+              class="offcanvas-nav-link d-flex align-items-center justify-content-between py-2 text-decoration-none">
+              <span>About Us</span>
+              <i class="bi bi-chevron-right small text-muted"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/services/"
+              class="offcanvas-nav-link d-flex align-items-center justify-content-between py-2 text-decoration-none"
+              data-bs-toggle="collapse" data-bs-target="#offcanvasServicesSubmenu" aria-expanded="false" role="button">
+              <span>Services</span>
+              <i class="bi bi-chevron-down small text-muted offcanvas-chevron"></i>
+            </a>
+            <div class="collapse offcanvas-submenu ps-3 pe-1 pt-1 pb-2" id="offcanvasServicesSubmenu">
+              <ul class="list-unstyled d-flex flex-column gap-1 mb-0 border-start ps-3 mt-1">
+                <li><a href="/services/" class="offcanvas-sub-link py-1 d-block fw-semibold text-primary">Explore All
+                    Services &rarr;</a></li>
+                <li><a href="/services/robotics-industrial-automation/"
+                    class="offcanvas-sub-link py-1 d-block text-secondary">Robotics &amp; Industrial Automation</a></li>
+                <li><a href="/services/software-development/custom-erp-development/"
+                    class="offcanvas-sub-link py-1 d-block text-secondary">Custom ERP Development</a></li>
+                <li><a href="/services/software-development/odoo-erp-development/"
+                    class="offcanvas-sub-link py-1 d-block text-secondary">Odoo ERP Development</a></li>
+                <li><a href="/services/hardware-automation/"
+                    class="offcanvas-sub-link py-1 d-block text-secondary">Hardware &amp; Automation</a></li>
+                <li><a href="/services/computer-vision/" class="offcanvas-sub-link py-1 d-block text-secondary">Computer
+                    Vision</a></li>
+                <li><a href="/services/ai-development/" class="offcanvas-sub-link py-1 d-block text-secondary">AI
+                    Development</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/blog/"
+              class="offcanvas-nav-link d-flex align-items-center justify-content-between py-2 text-decoration-none">
+              <span>Blog</span>
+              <i class="bi bi-chevron-right small text-muted"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/career/"
+              class="offcanvas-nav-link d-flex align-items-center justify-content-between py-2 text-decoration-none">
+              <span>Career</span>
+              <i class="bi bi-chevron-right small text-muted"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pt-4 border-top">
+        <a href="/contact/"
+          class="btn btn-header-contact w-100 rounded-pill py-2 d-flex align-items-center justify-content-center gap-2">
+          <span>Contact Us</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ==========================================================================
+         1. BLOG HERO BANNER SECTION (MATCHED TO REFERENCE SPECIFICATION)
+         ========================================================================== -->
+    <section class="blog-hero-section py-60">
+      <div class="container position-relative">
+
+        <!-- Decorative Sketched Arrow (Left Side) -->
+        <div class="blog-hero-arrow-wrap d-none d-lg-block">
+          <img src="/assets/img/blog-hero-arrow-trans.png" alt="Decorative Arrow" class="blog-hero-arrow-img">
+        </div>
+
+        <!-- Decorative Geometric Badge (Right Side) -->
+        <div class="blog-hero-badge-wrap d-none d-lg-block">
+          <img src="/assets/img/blog-hero-badge-trans.png" alt="Decorative Badge" class="blog-hero-badge-img">
+        </div>
+
+        <!-- Centered Main Content -->
+        <div class="blog-hero-inner">
+          <h1 class="blog-hero-title">
+            Industrial Robotics &amp;<br>AI Insights
+          </h1>
+          <p class="blog-hero-desc">
+            Practical engineering guides, technical architectures, and shopfloor insights on robotics,
+            computer vision inspection, hardware telemetry, and enterprise software, written by the
+            Weneura Futuretech engineering team.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         2. BLOG ARTICLES LISTING SECTION (OVERLAY CARDS MATCHED TO REFERENCE)
+         ========================================================================== -->
+    <section class="blog-listing-section py-60">
+      <div class="container">
+
+        <!-- Category Filter Buttons Row -->
+        <div class="blog-filter-pills justify-content-center">
+          <a href="#" class="blog-filter-btn active">All Articles</a>
+          <a href="#" class="blog-filter-btn">Industrial AI</a>
+          <a href="#" class="blog-filter-btn">Machine Learning</a>
+          <a href="#" class="blog-filter-btn">AI Ethics</a>
+          <a href="#" class="blog-filter-btn">Computer Vision</a>
+          <a href="#" class="blog-filter-btn">Robotics Automation</a>
+        </div>
+
+        <!-- Blog Overlay Cards Grid Row (3 Cards per row) -->
+        <div class="row g-4">
+
+          <!-- Card 1: Human-Centric AI -->
+          <div class="col-lg-4 col-md-6">
+            <a href="/blog/human-centric-artificial-intelligence/" class="blog-overlay-card">
+              <img src="/assets/img/post-default.png" alt="Human-Centric Artificial Intelligence in Industry"
+                class="blog-overlay-img">
+              <div class="blog-overlay-scrim"></div>
+
+              <!-- Top Author Row -->
+              <div class="blog-overlay-top">
+                <img src="/assets/img/author-avatar-1.jpg" alt="Siddharth Varsani" class="blog-author-avatar">
+                <span class="blog-author-name">Siddharth Varsani</span>
+              </div>
+
+              <!-- Bottom Content Area -->
+              <div class="blog-overlay-bottom">
+                <div class="blog-overlay-meta">- Industrial AI &nbsp;•&nbsp; Jan 2026</div>
+                <h3 class="blog-overlay-title">Human-Centric Artificial Intelligence in Industry.</h3>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 2: AI Odyssey -->
+          <div class="col-lg-4 col-md-6">
+            <a href="/blog/ai-odyssey-logic-gates-to-learning-machines/" class="blog-overlay-card">
+              <img src="/assets/img/post-default.png" alt="AI Odyssey: From Logic Gates to Learning Machines"
+                class="blog-overlay-img">
+              <div class="blog-overlay-scrim"></div>
+
+              <!-- Top Author Row -->
+              <div class="blog-overlay-top">
+                <img src="/assets/img/author-avatar-1.jpg" alt="Siddharth Varsani" class="blog-author-avatar">
+                <span class="blog-author-name">Siddharth Varsani</span>
+              </div>
+
+              <!-- Bottom Content Area -->
+              <div class="blog-overlay-bottom">
+                <div class="blog-overlay-meta">- Machine Learning &nbsp;•&nbsp; Feb 2026</div>
+                <h3 class="blog-overlay-title">AI Odyssey: Logic Gates to Learning Machines.</h3>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 3: AI Ethics -->
+          <div class="col-lg-4 col-md-6">
+            <a href="/blog/ai-ethics-digital-morality/" class="blog-overlay-card">
+              <img src="/assets/img/post-default.png" alt="AI Ethics & Digital Morality in Modern Technology"
+                class="blog-overlay-img">
+              <div class="blog-overlay-scrim"></div>
+
+              <!-- Top Author Row -->
+              <div class="blog-overlay-top">
+                <img src="/assets/img/author-avatar-1.jpg" alt="Siddharth Varsani" class="blog-author-avatar">
+                <span class="blog-author-name">Siddharth Varsani</span>
+              </div>
+
+              <!-- Bottom Content Area -->
+              <div class="blog-overlay-bottom">
+                <div class="blog-overlay-meta">- Governance &nbsp;•&nbsp; Mar 2026</div>
+                <h3 class="blog-overlay-title">AI Ethics &amp; Digital Morality in Modern Technology.</h3>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 4: AI in Daily Life -->
+          <div class="col-lg-4 col-md-6">
+            <a href="/blog/ai-in-daily-life/" class="blog-overlay-card">
+              <img src="/assets/img/post-default.png" alt="Practical Artificial Intelligence in Daily Life"
+                class="blog-overlay-img">
+              <div class="blog-overlay-scrim"></div>
+
+              <!-- Top Author Row -->
+              <div class="blog-overlay-top">
+                <img src="/assets/img/author-avatar-1.jpg" alt="Siddharth Varsani" class="blog-author-avatar">
+                <span class="blog-author-name">Siddharth Varsani</span>
+              </div>
+
+              <!-- Bottom Content Area -->
+              <div class="blog-overlay-bottom">
+                <div class="blog-overlay-meta">- Applied AI &nbsp;•&nbsp; Mar 2026</div>
+                <h3 class="blog-overlay-title">Practical Artificial Intelligence in Daily Life &amp; Operations.</h3>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Pagination Bar -->
+        <div class="blog-pagination">
+          <a href="#" class="blog-page-link active">1</a>
+          <a href="#" class="blog-page-link">2</a>
+          <a href="#" class="blog-page-link" aria-label="Next Page">
+            <i class="bi bi-chevron-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+     COMMON SITE FOOTER COMPONENT (WENEURA FUTURETECH)
+     NAP Standardized: Weneura Futuretech Private Limited
+     Rajkot, Gujarat, India | +91 83202 68596 | info@weneurafuturetech.com
+     ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <!-- Compact Main Row: Logo, Contact Pills & Social Links -->
+      <div
+        class="footer-compact-row py-4 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+        <!-- Brand Logo -->
+        <a href="/" class="footer-logo">
+          <img src="/assets/img/brand/logo-weneurafuturetech-dark.webp" alt="Weneura Futuretech"
+            class="footer-logo-img">
+        </a>
+
+        <!-- Contact Pills (Email & Phone) -->
+        <div class="footer-contact-pills d-flex flex-wrap align-items-center justify-content-center gap-2 m-0">
+          <a href="mailto:info@weneurafuturetech.com" class="footer-pill-btn text-decoration-none">
+            <span class="pill-icon"><i class="bi bi-envelope-fill"></i></span>
+            <span>info@weneurafuturetech.com</span>
+          </a>
+          <a href="tel:+918320268596" class="footer-pill-btn text-decoration-none">
+            <span class="pill-icon"><i class="bi bi-telephone-fill"></i></span>
+            <span>+91 83202 68596</span>
+          </a>
+        </div>
+
+        <!-- Social & Messaging Links -->
+        <div class="footer-social-links">
+          <a href="https://wa.me/918320268596" class="social-icon-btn" aria-label="WhatsApp" target="_blank"
+            rel="noopener">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://siddharthvarsani.com" class="social-icon-btn" aria-label="Founder Profile" target="_blank"
+            rel="noopener">
+            <i class="bi bi-person-circle"></i>
+          </a>
+          <a href="https://siddharthvarsani.com" class="social-icon-btn" aria-label="LinkedIn" target="_blank"
+            rel="noopener">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://siddharthvarsani.com" class="social-icon-btn" aria-label="Instagram" target="_blank"
+            rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright Bar -->
+      <div
+        class="footer-bottom-bar d-flex flex-column flex-md-row align-items-center justify-content-between gap-2 text-center text-md-start py-3">
+        <p class="copyright-text mb-0">
+          &copy; 2026 <span class="fw-bold text-dark">Weneura Futuretech Private Limited</span>. All Rights Reserved.
+        </p>
+        <div class="footer-legal-links d-flex gap-3">
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Use</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Interactive Controller & Component Script -->
+  <script src="/assets/js/common.js"></script>
+
+  <!-- Custom JS -->
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
