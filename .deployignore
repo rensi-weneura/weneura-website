@@ -9,9 +9,6 @@ docs/**
 pdf/
 pdf/**
 
-# Local Development Helper Scripts
-router.php
-
 # Version Control & Editor metadata
 .git/
 .gitignore

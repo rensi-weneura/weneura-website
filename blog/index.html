@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -106,8 +106,13 @@
 
         <!-- Left Column: Brand Logo -->
         <div class="d-flex align-items-center">
+          <!-- <a class="navbar-brand m-0" href="/">
+            <img src="/assets/img/brand/logo-weneurafuturetech-light.webp" alt="Weneura Futuretech" class="header-logo">
+          </a> -->
           <a class="navbar-brand m-0" href="/">
-            <img src="/assets/img/brand/logo-weneurafuturetech-dark.webp" alt="Weneura Futuretech" class="header-logo">
+            <img src="/assets/img/brand/logo-weneurafuturetech-light.webp" alt="Weneura Futuretech"
+              class="header-logo header-logo-light">
+            <img src="/assets/img/brand/logo-weneurafuturetech-dark.webp" alt="" class="header-logo header-logo-dark">
           </a>
         </div>
 
@@ -141,7 +146,7 @@
         <!-- Right Column: Contact Us Pill Button + Mobile Hamburger Toggle -->
         <div class="header-right-action d-flex align-items-center gap-2">
           <a href="/contact/"
-            class="btn btn-header-contact rounded-pill d-none d-md-inline-flex align-items-center gap-2">
+            class="btn btn-header-contact rounded-pill d-none d-md-inline-flex align-items-center gap-2 text-white">
             <span>Contact Us</span>
             <i class="bi bi-arrow-up-right"></i>
           </a>
@@ -188,7 +193,7 @@
           </div>
 
           <!-- 2. Software Development -->
-          <div class="col-lg col-md-6 mega-col-block">
+        <div class="col-lg col-md-6 mega-col-block">
             <span class="mega-category-title d-block">Software Development</span>
             <div class="mega-category-line"></div>
             <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
@@ -196,12 +201,8 @@
                   Development</a></li>
               <li><a href="/services/software-development/odoo-erp-development/" class="mega-item-link">Odoo ERP
                   Development &amp; Implementation</a></li>
-              <li><a href="/services/software-development/web-application-development/" class="mega-item-link">Web
-                  Application Development</a></li>
-              <li><a href="/services/software-development/mobile-application-development/" class="mega-item-link">Mobile
-                  Application Development</a></li>
-              <li><a href="/services/software-development/android-ios-app-development/" class="mega-item-link">Android
-                  &amp; iOS App Development</a></li>
+              <li><a href="/services/software-development/mobile-application-development/" class="mega-item-link">App Development</a></li>
+              
             </ul>
           </div>
 
@@ -242,10 +243,13 @@
             <span class="mega-category-title text-decoration-none d-block">AI Development</span>
             <div class="mega-category-line"></div>
             <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
-              <li><a href="/services/ai-development/" class="mega-item-link">Custom AI Development</a></li>
-              <li><a href="/services/ai-development/" class="mega-item-link">AI Consultancy</a></li>
-              <li><a href="/services/ai-development/" class="mega-item-link">Manufacturing AI Solutions</a></li>
-              <li><a href="/services/ai-development/" class="mega-item-link">AI-Powered Industrial Automation</a></li>
+              <li><a href="/services/ai-development/custom-AI-development/" class="mega-item-link">Custom AI
+                  Development</a></li>
+              <li><a href="/services/ai-development/ai-consultancy" class="mega-item-link">AI Consultancy</a></li>
+              <li><a href="/services/ai-development/custom-AI-development/" class="mega-item-link">Manufacturing AI
+                  Solutions</a></li>
+              <li><a href="/services/ai-development/custom-AI-development/" class="mega-item-link">AI-Powered Industrial
+                  Automation</a></li>
             </ul>
           </div>
 
@@ -269,7 +273,7 @@
     aria-labelledby="headerOffcanvasMenuLabel">
     <div class="offcanvas-header border-bottom py-3 px-4 d-flex align-items-center justify-content-between">
       <a class="navbar-brand m-0" href="/">
-        <img src="/assets/img/brand/logo-weneurafuturetech-dark.webp" alt="Weneura Futuretech" class="header-logo"
+        <img src="/assets/img/brand/logo-weneurafuturetech-light.webp" alt="Weneura Futuretech" class="header-logo"
           style="height: 34px;">
       </a>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -312,8 +316,8 @@
                     class="offcanvas-sub-link py-1 d-block text-secondary">Hardware &amp; Automation</a></li>
                 <li><a href="/services/computer-vision/" class="offcanvas-sub-link py-1 d-block text-secondary">Computer
                     Vision</a></li>
-                <li><a href="/services/ai-development/" class="offcanvas-sub-link py-1 d-block text-secondary">AI
-                    Development</a></li>
+                <li><a href="/services/ai-development/custom-AI-development/"
+                    class="offcanvas-sub-link py-1 d-block text-secondary">Custom AI Development</a></li>
               </ul>
             </div>
           </li>
@@ -384,104 +388,14 @@
       <div class="container">
 
         <!-- Category Filter Buttons Row -->
-        <div class="blog-filter-pills justify-content-center">
-          <a href="#" class="blog-filter-btn active">All Articles</a>
-          <a href="#" class="blog-filter-btn">Industrial AI</a>
-          <a href="#" class="blog-filter-btn">Machine Learning</a>
-          <a href="#" class="blog-filter-btn">AI Ethics</a>
-          <a href="#" class="blog-filter-btn">Computer Vision</a>
-          <a href="#" class="blog-filter-btn">Robotics Automation</a>
+        <div class="blog-filter-pills justify-content-center" id="blogFilters">
+          <a href="#" class="blog-filter-btn active" data-category="">All Articles</a>
         </div>
 
-        <!-- Blog Overlay Cards Grid Row (3 Cards per row) -->
-        <div class="row g-4">
-
-          <!-- Card 1: Human-Centric AI -->
-          <div class="col-lg-4 col-md-6">
-            <a href="/blog/human-centric-artificial-intelligence/" class="blog-overlay-card">
-              <img src="/assets/img/post-default.png" alt="Human-Centric Artificial Intelligence in Industry"
-                class="blog-overlay-img">
-              <div class="blog-overlay-scrim"></div>
-
-              <!-- Top Author Row -->
-              <div class="blog-overlay-top">
-                <img src="/assets/img/author-avatar-1.jpg" alt="Siddharth Varsani" class="blog-author-avatar">
-                <span class="blog-author-name">Siddharth Varsani</span>
-              </div>
-
-              <!-- Bottom Content Area -->
-              <div class="blog-overlay-bottom">
-                <div class="blog-overlay-meta">- Industrial AI &nbsp;•&nbsp; Jan 2026</div>
-                <h3 class="blog-overlay-title">Human-Centric Artificial Intelligence in Industry.</h3>
-              </div>
-            </a>
-          </div>
-
-          <!-- Card 2: AI Odyssey -->
-          <div class="col-lg-4 col-md-6">
-            <a href="/blog/ai-odyssey-logic-gates-to-learning-machines/" class="blog-overlay-card">
-              <img src="/assets/img/post-default.png" alt="AI Odyssey: From Logic Gates to Learning Machines"
-                class="blog-overlay-img">
-              <div class="blog-overlay-scrim"></div>
-
-              <!-- Top Author Row -->
-              <div class="blog-overlay-top">
-                <img src="/assets/img/author-avatar-1.jpg" alt="Siddharth Varsani" class="blog-author-avatar">
-                <span class="blog-author-name">Siddharth Varsani</span>
-              </div>
-
-              <!-- Bottom Content Area -->
-              <div class="blog-overlay-bottom">
-                <div class="blog-overlay-meta">- Machine Learning &nbsp;•&nbsp; Feb 2026</div>
-                <h3 class="blog-overlay-title">AI Odyssey: Logic Gates to Learning Machines.</h3>
-              </div>
-            </a>
-          </div>
-
-          <!-- Card 3: AI Ethics -->
-          <div class="col-lg-4 col-md-6">
-            <a href="/blog/ai-ethics-digital-morality/" class="blog-overlay-card">
-              <img src="/assets/img/post-default.png" alt="AI Ethics & Digital Morality in Modern Technology"
-                class="blog-overlay-img">
-              <div class="blog-overlay-scrim"></div>
-
-              <!-- Top Author Row -->
-              <div class="blog-overlay-top">
-                <img src="/assets/img/author-avatar-1.jpg" alt="Siddharth Varsani" class="blog-author-avatar">
-                <span class="blog-author-name">Siddharth Varsani</span>
-              </div>
-
-              <!-- Bottom Content Area -->
-              <div class="blog-overlay-bottom">
-                <div class="blog-overlay-meta">- Governance &nbsp;•&nbsp; Mar 2026</div>
-                <h3 class="blog-overlay-title">AI Ethics &amp; Digital Morality in Modern Technology.</h3>
-              </div>
-            </a>
-          </div>
-
-          <!-- Card 4: AI in Daily Life -->
-          <div class="col-lg-4 col-md-6">
-            <a href="/blog/ai-in-daily-life/" class="blog-overlay-card">
-              <img src="/assets/img/post-default.png" alt="Practical Artificial Intelligence in Daily Life"
-                class="blog-overlay-img">
-              <div class="blog-overlay-scrim"></div>
-
-              <!-- Top Author Row -->
-              <div class="blog-overlay-top">
-                <img src="/assets/img/author-avatar-1.jpg" alt="Siddharth Varsani" class="blog-author-avatar">
-                <span class="blog-author-name">Siddharth Varsani</span>
-              </div>
-
-              <!-- Bottom Content Area -->
-              <div class="blog-overlay-bottom">
-                <div class="blog-overlay-meta">- Applied AI &nbsp;•&nbsp; Mar 2026</div>
-                <h3 class="blog-overlay-title">Practical Artificial Intelligence in Daily Life &amp; Operations.</h3>
-              </div>
-            </a>
-          </div>
-
+        <!-- Blog Overlay Cards Grid Row -->
+        <div class="row g-4" id="blogGrid">
+          <div class="col-12 text-center py-5">Loading articles...</div>
         </div>
-
         <!-- Pagination Bar -->
         <div class="blog-pagination">
           <a href="#" class="blog-page-link active">1</a>
@@ -535,12 +449,12 @@
             rel="noopener">
             <i class="bi bi-person-circle"></i>
           </a>
-          <a href="https://siddharthvarsani.com" class="social-icon-btn" aria-label="LinkedIn" target="_blank"
-            rel="noopener">
+          <a href="https://www.linkedin.com/company/weneura-futuretech" class="social-icon-btn" aria-label="LinkedIn"
+            target="_blank" rel="noopener">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
-          <a href="https://siddharthvarsani.com" class="social-icon-btn" aria-label="Instagram" target="_blank"
-            rel="noopener">
+          <a href="https://www.instagram.com/weneura_futuretech/?hl=en" class="social-icon-btn" aria-label="Instagram"
+            target="_blank" rel="noopener">
             <i class="fa-brands fa-instagram"></i>
           </a>
         </div>
@@ -568,6 +482,113 @@
 
   <!-- Custom JS -->
   <script src="/assets/js/main.js"></script>
+
+  <script>
+    // ====== CONFIG ======
+    const API_URL = location.hostname === 'www.weneurafuturetech.com'
+      ? 'https://api.weneurafuturetech.com/api'
+      : 'http://192.168.1.57:8000/api';
+
+    const DEFAULT_IMG = '/assets/img/post-default.png';
+    const DEFAULT_AVATAR = '/assets/img/author-avatar-1.jpg';
+
+    const filtersEl = document.getElementById('blogFilters');
+    const gridEl = document.getElementById('blogGrid');
+
+    // ====== HELPERS ======
+    function esc(str) {
+      return String(str ?? '').replace(/[&<>"']/g, ch => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[ch]));
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      const d = new Date(dateStr.replace(' ', 'T'));
+      return isNaN(d) ? '' : d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    }
+
+    // ====== 1. CATEGORIES ======
+    async function loadCategories() {
+      try {
+        const res = await fetch(`${API_URL}/blog-categories`);
+        const json = await res.json();
+
+        (json.data || []).forEach(cat => {
+          filtersEl.insertAdjacentHTML('beforeend',
+            `<a href="#" class="blog-filter-btn" data-category="${esc(cat.id)}">${esc(cat.title)}</a>`
+          );
+        });
+      } catch (err) {
+        console.error('Categories load error:', err);
+      }
+    }
+
+    filtersEl.addEventListener('click', e => {
+      const btn = e.target.closest('.blog-filter-btn');
+      if (!btn) return;
+      e.preventDefault();
+
+      filtersEl.querySelectorAll('.blog-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      loadBlogs(btn.dataset.category);
+    });
+
+    // ====== 2. BLOGS ======
+    function blogCard(blog) {
+      // Use slug link: /blog/blog-details/?slug=odoo-erp-system
+      const slug = blog.slug || blog.id;
+      const link = `/blog/blog-details/?slug=${encodeURIComponent(slug)}`;
+      const meta = [blog.category_title, formatDate(blog.created_at)]
+        .filter(Boolean).map(esc).join(' &nbsp;•&nbsp; ');
+
+      return `
+      <div class="col-lg-4 col-md-6">
+        <a href="${esc(link)}" class="blog-overlay-card">
+          <img src="${esc(blog.image || DEFAULT_IMG)}" alt="${esc(blog.title)}" class="blog-overlay-img">
+          <div class="blog-overlay-scrim"></div>
+
+          <div class="blog-overlay-top">
+            <img src="${DEFAULT_AVATAR}" alt="Siddharth Varsani" class="blog-author-avatar">
+            <span class="blog-author-name">Siddharth Varsani</span>
+          </div>
+
+          <div class="blog-overlay-bottom">
+            <div class="blog-overlay-meta">- ${meta}</div>
+            <h3 class="blog-overlay-title">${esc(blog.title)}</h3>
+          </div>
+        </a>
+      </div>`;
+    }
+
+    async function loadBlogs(categoryId = '') {
+      gridEl.innerHTML = '<div class="col-12 text-center py-5">Loading articles...</div>';
+
+      try {
+        const url = categoryId
+          ? `${API_URL}/blogs?category=${encodeURIComponent(categoryId)}`
+          : `${API_URL}/blogs`;
+
+        const res = await fetch(url);
+        const json = await res.json();
+
+        if (!json.data || json.data.length === 0) {
+          gridEl.innerHTML = '<div class="col-12 text-center py-5">No articles found in this category.</div>';
+          return;
+        }
+
+        gridEl.innerHTML = json.data.map(blogCard).join('');
+      } catch (err) {
+        console.error('Blogs load error:', err);
+        gridEl.innerHTML = '<div class="col-12 text-center py-5 text-danger">Could not load articles. Please try again.</div>';
+      }
+    }
+
+    // ====== INIT ======
+    loadCategories();
+    loadBlogs();
+  </script>
 </body>
 
 </html>

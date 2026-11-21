@@ -1,0 +1,232 @@
+
+img.logo_light {
+    height: 100%;
+    width: 180px;
+}
+
+.light-style .menu .app-brand.demo {
+    min-height: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.req {
+  color: red;
+}
+
+.image-upload {
+  border: 1px solid #ccc;
+  padding:15px;
+  height: 440px;
+  display: flex;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.logo-upload {
+  border: 1px solid #ccc;
+  padding:15px;
+  height: 200px;
+  display: flex;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+  
+.file-input {
+  display: none;
+}
+
+img#label-icon-preview {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img#letter-icon-preview {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+img#letter-outline-preview {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+img#banner-preview {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+img#icon-preview {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+img#image-preview {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img#header-preview {
+  max-width: 100%;
+  max-height: 100%;
+}
+img#req-preview{
+  max-width: 100%;
+  max-height: 100%;
+}
+img#challenge-preview{
+  max-width: 100%;
+  max-height: 100%;
+}
+img#outcome-preview{
+   max-width: 100%;
+  max-height: 100%;
+}
+img#profile-preview{
+  max-width: 100%;
+  max-height: 100%;
+}
+img#testimonial-preview{
+  max-width: 100%;
+  max-height: 100%;
+}
+.switches{
+  margin-top: 20px;
+}
+
+.file-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+}
+
+.banner-upload {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 15px;
+  height: 440px;
+  display: flex;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.ck-editor__editable {
+  min-height: 400px !important;
+  height: 400px !important;
+  overflow-y: auto;
+}
+
+.bg-navbar-theme .search-input-wrapper .search-input {
+    color: #ffffff;
+}
+
+i.ti.ti-arrow-left.ti-md.me-2.me-lg-4.ti-lg {
+  color: white;
+  margin-bottom: 15px;
+}
+
+
+
+.photo-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.ngo-photo-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.photo-preview-wrapper {
+  position: relative;
+  margin: 5px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.photos-preview {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  height: 100px;
+}
+
+.thumbnail-photos-preview {
+  /* border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 100px; */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.thumbnail-close-btn {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.thumbnail-photo-preview-wrapper {
+  /* position: relative;
+  margin: 5px;
+  max-width: 200px;
+  max-height: 100px; */
+
+    position: relative;
+    margin: 5px;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

@@ -679,6 +679,24 @@
     padding: 11px 18px;
     font-size: 14px;
   }
+
+  .blog-hero-section {
+    padding-top: 95px !important;
+    padding-bottom: 35px !important;
+  }
+
+  .blog-hero-title {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 14px !important;
+  }
+
+  .blog-hero-desc {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    padding: 0 10px;
+  }
 }
 
 /* ==========================================================================
@@ -719,7 +737,7 @@
     display: none;
   }
 
-  .job-card-meta > span:not(.meta-divider) {
+  .job-card-meta>span:not(.meta-divider) {
     display: inline-flex;
     align-items: center;
     background: #f8fafc;
@@ -857,6 +875,7 @@
     font-size: 1.05rem;
   }
 }
+
 /* ==========================================================================
    ABOUT PAGE (/about/) — scoped with body.page-about
    ========================================================================== */
@@ -890,6 +909,25 @@
 
   .page-about .contact-paragraph {
     font-size: 24px;
+  }
+
+  .blog-hero-section {
+    padding-top: 110px !important;
+    padding-bottom: 45px !important;
+  }
+
+  .blog-hero-title {
+    font-size: 38px !important;
+    line-height: 1.15 !important;
+  }
+
+  /* Ensure dark logo is visible on the mobile white navbar */
+  .site-header .header-logo-light {
+    opacity: 0 !important;
+  }
+
+  .site-header .header-logo-dark {
+    opacity: 1 !important;
   }
 }
 
@@ -977,10 +1015,19 @@
     font-size: 20px;
     margin-bottom: 18px;
   }
+
+  .contact-top-title {
+    padding-top: 40px;
+  }
+
+  /* .blog-hero-title{
+    font-size: 28px;
+  } */
 }
 
 /* Touch devices: disable hover lifts that "stick" after tap */
 @media (hover: none) {
+
   .page-about .value-card:hover,
   .page-about .vm-clean-illustration:hover,
   .page-about .btn-schedule-call:hover {

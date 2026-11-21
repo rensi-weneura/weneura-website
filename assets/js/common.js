@@ -15,10 +15,14 @@
     initHeaderFeatures();
   });
 
+  if (window.location.pathname.toLowerCase().startsWith('/blog')) {
+    document.body.classList.add('page-blog');
+  }
+
   // 1. Highlight Active Navigation Link based on current URL path
   function highlightActiveLink() {
     const currentPath = (window.location.pathname || '').replace(/\\/g, '/').toLowerCase();
-    
+
     document.querySelectorAll('.nav-capsule-links .nav-link, .offcanvas-nav-link').forEach(link => {
       const href = (link.getAttribute('href') || '').toLowerCase();
       if (href === currentPath || (currentPath === '/' && href === '/')) {
